@@ -14,5 +14,4 @@ RUN apt-get update && apt-get install -y docker-ce-cli
 USER jenkins
 RUN echo "groupadd docker"
 RUN echo "usermod -aG docker root"
-RUN chmod 666 /var/run/docker.sock
 RUN jenkins-plugin-cli --plugins "blueocean docker-workflow"
